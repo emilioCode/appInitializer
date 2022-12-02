@@ -53,6 +53,49 @@
               ],
               "outputHashing": "all"
             },
+            "preprod": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.preprod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "sqa": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.sqa.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+
             "development": {
               "buildOptimizer": false,
               "optimization": false,
@@ -69,6 +112,12 @@
           "configurations": {
             "production": {
               "browserTarget": "appInitializer:build:production"
+            },
+            "preprod": {
+              "browserTarget": "appInitializer:build:preprod"
+            },
+            "sqa": {
+              "browserTarget": "appInitializer:build:sqa"
             },
             "development": {
               "browserTarget": "appInitializer:build:development"

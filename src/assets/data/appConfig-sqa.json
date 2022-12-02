@@ -1,0 +1,17 @@
+{
+  "api": {
+    "baseURL": "sqaURL",
+    "options": [
+      {
+        "key": "Content-Type",
+        "value" : "application/json"
+      },
+      {
+        "key": "Accept",
+        "value" : "application/json"
+      }
+    ],
+    "timeout": 3000,
+    "version": ""
+  }
+}
